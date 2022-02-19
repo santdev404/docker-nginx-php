@@ -25,3 +25,127 @@ Compile assets
 ------------------------------------------------
 Run artisan commads
 >docker-commads run --rm artisan migrate
+
+------------------------------------------------
+
+///
+seach ports
+> sudo lsof -i -P -n | grep LISTEN
+
+apache status /stop
+>sudo systemctl status apache2
+>sudo systemctl stop apache2
+-------------------------------------------
+
+To stop MySQL server use the following command:
+> sudo service mysql stop
+
+To start MySQL server use the following command:
+> sudo service mysql start
+
+To restart MySQL server use the following command:
+>sudo service mysql restart
+
+To check MySQL server status (i.e. whether it is running or not) you can use the following command:
+>sudo service mysql status
+
+-------------------------------------------
+
+>sudo apt-get update
+
+>sudo apt-get install curl
+
+>curl -fsSL https://get.docker.com -o get-docker.sh
+
+>sudo sh get-docker.sh
+
+>sudo usermod -aG docker adminuser
+
+> sudo chmod 666 /var/run/docker.sock
+
+Para validar
+
+>docker info
+
+
+- Install docker compose
+
+Seleccionar la opcion latest release "https://github.com/docker/compose/releases"
+ 
+> curl -L https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64 -o /tmp/docker-compose
+
+-Cambiar permisos
+> chmod +x docker-compose
+
+-Mover
+>sudo mv /tmp/docker-compose /usr/local/bin/docker-compose
+
+-Probar
+> docker-compose --vesion
+
+> which docker-compose
+
+
+- Ejecutar docker hello world
+
+> docker run --rm busybox:latest /bin/echo "hello there!!"
+
+> docker --help
+
+> docker run
+
+Visualizar images de docker
+> docker images
+
+> docker ps
+
+Delete container
+
+> docker rm
+
+Ejecutar docket e interacturar
+> docker run -it --rm busybox:latest 
+
+
+Docker basics ­ Docker hello world
+
+Run the busybox hello world example
+> docker run --rm busybox:latest /bin/echo "Hello world"
+
+Check out the Docker help menu
+> docker --help
+
+List available Docker images
+> docker images
+
+Re­run the hello world example, see how fast it goes
+> docker run --rm busybox:latest /bin/echo "Hello world"
+
+Re­run the hello world example, without the ­­rm flag
+> docker run busybox:latest /bin/echo "Hello world"
+
+List all Docker containers and notice it exists since we ran it without ­­rm
+> docker ps -a
+
+Remove the straggling Docker container
+> docker rm <container id from running the above command>
+
+Verify the busybox container is gone
+> docker ps -a
+
+Enter into a bash prompt on the busybox container
+> docker run -it --rm busybox:latest
+
+List out the Docker run help menu
+> docker run --help
+
+List available Docker images
+> docker images
+
+Remove the busybox image
+> docker rmi <image id from running the above command>
+
+Verify the busybox image is gone
+> docker images
+
+
