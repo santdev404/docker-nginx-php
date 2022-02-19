@@ -1,0 +1,27 @@
+
+Docker up & build all
+>docker-compose up --build
+
+Start container
+>docker-composer up
+
+------------------------------------------------
+
+Build docker
+>docker-compose build composer
+
+Run commads on composer
+>docker-compose run --rm composer create-project laravel/laravel .
+
+------------------------------------------------
+
+Install npm
+>docker-compose run --rm npm install
+
+Compile assets
+>docker-compose run --rm npm run dev
+
+
+------------------------------------------------
+Run artisan commads
+>docker-commads run --rm artisan migrate
